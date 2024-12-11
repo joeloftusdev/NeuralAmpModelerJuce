@@ -1,0 +1,9 @@
+cmake-build-debug-visual-studio
+cmake-build-release-visual-studio
+cmake-build-release-clang
+cmake-build-debug-clang
+cmake-build-release
+cmake-build-relwithdebinfo
+.idea
+hash.txt
+

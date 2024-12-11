@@ -1,0 +1,12 @@
+[submodule "deps/JUCE"]
+	path = deps/JUCE
+	url = https://github.com/juce-framework/JUCE
+[submodule "deps/nam-core"]
+	path = deps/nam-core
+	url = https://github.com/joeloftusdev/NeuralAmpModelerCore
+[submodule "deps/json"]
+	path = deps/json
+	url = https://github.com/nlohmann/json
+[submodule "deps/nam-resampler"]
+	path = deps/nam-resampler
+	url = https://github.com/joeloftusdev/nam-resampler
