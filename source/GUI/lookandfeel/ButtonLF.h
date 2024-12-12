@@ -10,6 +10,8 @@ public:
         nextArrowIcon = juce::Drawable::createFromSVG(*juce::parseXML(nextArrowSvg));
         deleteIcon = juce::Drawable::createFromSVG(*juce::parseXML(deleteSvg));
         folderIcon = juce::Drawable::createFromSVG(*juce::parseXML(folderSvg));
+
+        fontData = juce::Typeface::createSystemTypefaceFor(BinaryData::RobotoRegular_ttf, BinaryData::RobotoRegular_ttfSize);
     }
 
     void drawButtonBackground(juce::Graphics& g, juce::Button& button, const juce::Colour& /*backgroundColour*/,
@@ -69,7 +71,7 @@ private:
     std::unique_ptr<juce::Drawable> nextArrowIcon;
     std::unique_ptr<juce::Drawable> deleteIcon;
     std::unique_ptr<juce::Drawable> folderIcon;
-    juce::Font fontData {juce::FontOptions{juce::Typeface::createSystemTypefaceFor(BinaryData::RobotoRegular_ttf, BinaryData::RobotoRegular_ttfSize)}};
+    juce::Font fontData;
 
     static constexpr auto nextArrowSvg = R"(
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#bfbfbf" stroke="#bfbfbf">

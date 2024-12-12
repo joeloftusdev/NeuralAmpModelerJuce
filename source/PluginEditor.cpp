@@ -339,10 +339,12 @@ ProcessorEditor::ProcessorEditor (Processor& p)
     addAndMakeVisible(titleLabel);
     titleLabel.setText("NAM JUCE", juce::dontSendNotification);
     titleLabel.setJustificationType(juce::Justification::centred);
-    const auto titleFont = juce::Typeface::createSystemTypefaceFor(BinaryData::MichromaRegular_ttf, BinaryData::MichromaRegular_ttfSize);
-    juce::FontOptions fontOptions;
-    fontOptions = fontOptions.withStyle("").withTypeface(titleFont).withHeight(40.0f);
-    titleLabel.setFont(juce::Font(fontOptions));
+    juce::Font titleFont = juce::Typeface::createSystemTypefaceFor(BinaryData::MichromaRegular_ttf, BinaryData::MichromaRegular_ttfSize);
+    titleFont.setHeight(43.0f);
+    titleLabel.setFont(titleFont);
+
+
+
 
     bypassIRButton.onClick = [this] {
         updateBypassStates();

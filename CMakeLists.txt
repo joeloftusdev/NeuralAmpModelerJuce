@@ -59,6 +59,7 @@ target_compile_definitions(ProjectCode INTERFACE
         JUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=0
         PLUG_VERSION="${PLUGIN_VERSION}"
         JUCE_ASIO=1
+        JUCE_DISPLAY_SPLASH_SCREEN=1
 )
 
 target_sources(ProjectCode INTERFACE

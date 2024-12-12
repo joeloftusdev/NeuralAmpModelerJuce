@@ -7,7 +7,10 @@ class LabelLF final : public juce::LookAndFeel_V4
 {
 public:
     LabelLF()
-    = default;
+    {
+        fontData = juce::Typeface::createSystemTypefaceFor(BinaryData::RobotoRegular_ttf, BinaryData::RobotoRegular_ttfSize);
+    }
+
 
     void drawLabel(juce::Graphics& g, juce::Label& label) override
     {
@@ -24,5 +27,5 @@ public:
     }
 
 private:
-    juce::Font fontData {juce::FontOptions{juce::Typeface::createSystemTypefaceFor(BinaryData::RobotoRegular_ttf, BinaryData::RobotoRegular_ttfSize)}};
+    juce::Font fontData;
 };
